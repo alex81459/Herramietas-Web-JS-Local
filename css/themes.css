@@ -98,6 +98,40 @@ body {
     box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
 }
 
+[data-theme="dark"] .form-control::placeholder {
+    color: var(--texto-muted) !important;
+    opacity: 1;
+}
+
+[data-theme="dark"] .form-control::-webkit-input-placeholder {
+    color: var(--texto-muted) !important;
+}
+
+[data-theme="dark"] .form-control::-moz-placeholder {
+    color: var(--texto-muted) !important;
+}
+
+[data-theme="dark"] .form-control:-ms-input-placeholder {
+    color: var(--texto-muted) !important;
+}
+
+[data-theme="dark"] .form-control[readonly] {
+    background-color: var(--bg-card);
+    border-color: var(--borde-color);
+    color: var(--texto-secundario);
+}
+
+[data-theme="dark"] textarea.form-control {
+    background-color: var(--bg-secundario);
+    border-color: var(--borde-color);
+    color: var(--texto-principal);
+}
+
+[data-theme="dark"] textarea.form-control::placeholder {
+    color: var(--texto-muted) !important;
+    opacity: 1;
+}
+
 [data-theme="dark"] .modal-content {
     background-color: var(--bg-card);
     border-color: var(--borde-color);
@@ -136,6 +170,33 @@ body {
 
 [data-theme="dark"] .card-text {
     color: var(--texto-secundario) !important;
+}
+
+[data-theme="dark"] .card-header {
+    background-color: var(--bg-secundario) !important;
+    color: var(--texto-principal) !important;
+    border-color: var(--borde-color) !important;
+}
+
+[data-theme="dark"] .card-header h5,
+[data-theme="dark"] .card-header h6 {
+    color: var(--texto-principal) !important;
+}
+
+[data-theme="dark"] .form-check-label {
+    color: var(--texto-principal) !important;
+}
+
+[data-theme="dark"] .form-label {
+    color: var(--texto-principal) !important;
+}
+
+[data-theme="dark"] .card-body ul li {
+    color: var(--texto-principal) !important;
+}
+
+[data-theme="dark"] .card-body h6 {
+    color: var(--texto-principal) !important;
 }
 
 [data-theme="dark"] .badge.bg-light {
@@ -188,11 +249,84 @@ body {
 
 [data-theme="dark"] .table td {
     border-color: var(--borde-color);
+    color: var(--texto-principal);
 }
 
 [data-theme="dark"] .table th {
     border-color: var(--borde-color);
     color: var(--texto-secundario);
+}
+
+[data-theme="dark"] table,
+[data-theme="dark"] tbody,
+[data-theme="dark"] tr,
+[data-theme="dark"] td {
+    color: var(--texto-principal) !important;
+}
+
+[data-theme="dark"] table td strong,
+[data-theme="dark"] tbody td strong,
+[data-theme="dark"] tr td strong {
+    color: var(--texto-principal) !important;
+}
+
+[data-theme="dark"] table td span,
+[data-theme="dark"] tbody td span,
+[data-theme="dark"] tr td span {
+    color: var(--texto-principal) !important;
+}
+
+[data-theme="dark"] .table * {
+    color: var(--texto-principal) !important;
+}
+
+[data-theme="dark"] table:not(.table) {
+    color: var(--texto-principal);
+}
+
+[data-theme="dark"] table:not(.table) td,
+[data-theme="dark"] table:not(.table) th {
+    border-color: var(--borde-color);
+    color: var(--texto-principal);
+}
+
+[data-theme="dark"] .table-sm,
+[data-theme="dark"] .table-sm * {
+    color: var(--texto-principal) !important;
+}
+
+[data-theme="dark"] .table-sm td,
+[data-theme="dark"] .table-sm th {
+    border-color: var(--borde-color) !important;
+    color: var(--texto-principal) !important;
+}
+
+[data-theme="dark"] .table-responsive {
+    color: var(--texto-principal);
+}
+
+[data-theme="dark"] .table-responsive .table,
+[data-theme="dark"] .table-responsive .table * {
+    color: var(--texto-principal) !important;
+}
+
+[data-theme="dark"] .table td strong,
+[data-theme="dark"] .table-sm td strong,
+[data-theme="dark"] .table-responsive td strong {
+    color: var(--texto-principal) !important;
+}
+
+[data-theme="dark"] .table td span,
+[data-theme="dark"] .table-sm td span,
+[data-theme="dark"] .table-responsive td span {
+    color: var(--texto-principal) !important;
+}
+
+[data-theme="dark"] .table tbody tr td,
+[data-theme="dark"] .table-sm tbody tr td,
+[data-theme="dark"] .table-responsive table tbody tr td {
+    color: var(--texto-principal) !important;
+    background-color: transparent !important;
 }
 
 [data-theme="dark"] .lead {
@@ -274,4 +408,155 @@ body {
 [data-theme="dark"] .btn-outline-danger {
     color: var(--color-peligro);
     border-color: var(--color-peligro);
+}
+
+
+[data-theme="dark"] .badge.text-dark,
+[data-theme="dark"] .text-dark {
+    color: var(--texto-principal) !important;
+}
+
+[data-theme="dark"] .badge.bg-warning {
+    background-color: var(--color-advertencia) !important;
+    color: #000000 !important;
+}
+
+[data-theme="dark"] .card-header.bg-warning {
+    background-color: var(--color-advertencia) !important;
+    color: #000000 !important;
+}
+
+[data-theme="dark"] .badge.bg-warning.text-dark {
+    color: #000000 !important;
+}
+
+[data-theme="dark"] .badge.bg-light.text-dark {
+    background-color: var(--bg-secundario) !important;
+    color: var(--texto-principal) !important;
+    border: 1px solid var(--borde-color);
+}
+
+[data-theme="dark"] pre,
+[data-theme="dark"] code {
+    background-color: var(--bg-secundario) !important;
+    color: var(--texto-principal) !important;
+    border: 1px solid var(--borde-color);
+}
+
+[data-theme="dark"] .bg-light {
+    background-color: var(--bg-secundario) !important;
+    color: var(--texto-principal) !important;
+}
+
+[data-theme="dark"] .bg-light.rounded,
+[data-theme="dark"] .bg-light.p-2,
+[data-theme="dark"] .bg-light.text-center {
+    background-color: var(--bg-secundario) !important;
+    color: var(--texto-principal) !important;
+}
+
+[data-theme="dark"] .text-muted {
+    color: var(--texto-muted) !important;
+}
+
+[data-theme="dark"] .form-label {
+    color: var(--texto-principal) !important;
+}
+
+[data-theme="dark"] .accordion-button {
+    background-color: var(--bg-secundario);
+    color: var(--texto-principal);
+    border-color: var(--borde-color);
+}
+
+[data-theme="dark"] .accordion-button:not(.collapsed) {
+    background-color: var(--bg-card);
+    color: var(--texto-principal);
+}
+
+[data-theme="dark"] .accordion-body {
+    background-color: var(--bg-card);
+    color: var(--texto-principal);
+    border-color: var(--borde-color);
+}
+
+[data-theme="dark"] .input-group-text {
+    background-color: var(--bg-secundario);
+    border-color: var(--borde-color);
+    color: var(--texto-principal);
+}
+
+[data-theme="dark"] .list-unstyled li {
+    color: var(--texto-principal) !important;
+}
+
+[data-theme="dark"] .card-body p,
+[data-theme="dark"] .card-body div,
+[data-theme="dark"] .card-body span {
+    color: var(--texto-principal) !important;
+}
+
+[data-theme="dark"] .card * {
+    color: inherit;
+}
+
+[data-theme="dark"] .card {
+    color: var(--texto-principal);
+}
+
+[data-theme="dark"] .font-monospace {
+    color: var(--texto-principal) !important;
+    background-color: transparent;
+}
+
+[data-theme="dark"] .form-control.font-monospace {
+    background-color: var(--bg-secundario) !important;
+    color: var(--texto-principal) !important;
+    border-color: var(--borde-color) !important;
+}
+
+[data-theme="dark"] .form-control.font-monospace::placeholder {
+    color: var(--texto-muted) !important;
+}
+
+[data-theme="dark"] input[type="text"],
+[data-theme="dark"] input[type="password"],
+[data-theme="dark"] input[type="email"],
+[data-theme="dark"] input[type="number"],
+[data-theme="dark"] textarea {
+    background-color: var(--bg-secundario) !important;
+    border-color: var(--borde-color) !important;
+    color: var(--texto-principal) !important;
+}
+
+[data-theme="dark"] input::placeholder,
+[data-theme="dark"] textarea::placeholder {
+    color: var(--texto-muted) !important;
+    opacity: 0.7;
+}
+
+[data-theme="dark"] .table,
+[data-theme="dark"] .table-sm,
+[data-theme="dark"] .table-responsive .table {
+    background-color: transparent !important;
+}
+
+[data-theme="dark"] .table tbody,
+[data-theme="dark"] .table-sm tbody,
+[data-theme="dark"] .table-responsive .table tbody {
+    background-color: transparent !important;
+}
+
+[data-theme="dark"] .table tr,
+[data-theme="dark"] .table-sm tr,
+[data-theme="dark"] .table-responsive .table tr {
+    background-color: transparent !important;
+}
+
+[data-theme="dark"] .table td,
+[data-theme="dark"] .table th,
+[data-theme="dark"] .table-sm td,
+[data-theme="dark"] .table-sm th {
+    border-top: 1px solid var(--borde-color) !important;
+    border-bottom: none !important;
 }

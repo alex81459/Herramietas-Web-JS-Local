@@ -181,7 +181,7 @@ class ConversorImagenes {
                                 <div class="col-lg-6">
                                     <h6 class="text-center mb-3">
                                         <span class="badge bg-success">Convertida</span>
-                                        <span id="formatoConvertidoBadge" class="badge bg-warning text-dark ms-2">-</span>
+                                        <span id="formatoConvertidoBadge" class="badge bg-warning ms-2">-</span>
                                         <span id="diferenciaFormato" class="badge bg-info ms-2" style="display: none;">
                                             Cambio: 0%
                                         </span>
@@ -276,7 +276,7 @@ class ConversorImagenes {
             <div class="row mb-4">
                 <div class="col-12">
                     <div class="card herramienta-card">
-                        <div class="card-header bg-warning text-dark">
+                        <div class="card-header bg-warning">
                             <h5 class="card-title mb-0">
                                 <i class="bi bi-collection me-2"></i>Conversión en Lote
                             </h5>
@@ -737,7 +737,7 @@ class ConversorImagenes {
         const diferencia = ((this.imagenConvertida.tamano - this.imagenOriginal.tamano) / this.imagenOriginal.tamano) * 100;
         const badgeDiferencia = document.getElementById('diferenciaFormato');
         badgeDiferencia.textContent = `${diferencia > 0 ? '+' : ''}${diferencia.toFixed(1)}%`;
-        badgeDiferencia.className = `badge ms-2 ${diferencia > 0 ? 'bg-warning text-dark' : 'bg-success'}`;
+        badgeDiferencia.className = `badge ms-2 ${diferencia > 0 ? 'bg-warning' : 'bg-success'}`;
         badgeDiferencia.style.display = 'inline';
 
         document.getElementById('descargarConvertida').disabled = false;

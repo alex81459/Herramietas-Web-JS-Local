@@ -140,7 +140,7 @@ class DecodificadorJWT {
             <div class="row mb-4">
                 <div class="col-12">
                     <div class="card herramienta-card">
-                        <div class="card-header bg-warning text-dark">
+                        <div class="card-header bg-warning">
                             <h5 class="card-title mb-0">
                                 <i class="bi bi-graph-up me-2"></i>Análisis del Token
                             </h5>
@@ -199,7 +199,7 @@ class DecodificadorJWT {
                                     <ul class="list-unstyled">
                                         <li><span class="badge bg-danger me-2">Header</span>Algoritmo y tipo</li>
                                         <li><span class="badge bg-info me-2">Payload</span>Claims (datos)</li>
-                                        <li><span class="badge bg-warning text-dark me-2">Signature</span>Verificación</li>
+                                        <li><span class="badge bg-warning me-2">Signature</span>Verificación</li>
                                     </ul>
                                 </div>
                                 <div class="col-lg-6">
@@ -402,7 +402,7 @@ class DecodificadorJWT {
             estadoElement.className = 'badge bg-danger';
             estadoElement.textContent = 'Expirado';
         } else if (nbf && ahora < nbf) {
-            estadoElement.className = 'badge bg-warning text-dark';
+            estadoElement.className = 'badge bg-warning';
             estadoElement.textContent = 'No válido aún';
         } else if (exp) {
             estadoElement.className = 'badge bg-success';
@@ -425,7 +425,7 @@ class DecodificadorJWT {
         const claimsHTML = claims.map(claim => {
             const valor = typeof payload[claim] === 'object' ? 
                 JSON.stringify(payload[claim]) : payload[claim];
-            return `<span class="badge bg-light text-dark me-1 mb-1"><code>${claim}</code>: ${valor}</span>`;
+            return `<span class="badge bg-secondary text-white me-1 mb-1"><code>${claim}</code>: ${valor}</span>`;
         }).join('');
         
         container.innerHTML = claimsHTML;

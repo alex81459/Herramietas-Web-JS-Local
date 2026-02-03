@@ -17,6 +17,7 @@ Coleccion de herramientas utiles para desarrolladores y usuarios web desarrollad
 -Decodificador JWT decodifica tokens JWT y muestra su contenido estructurado
 -Generador de Hashe genera hashes MD5, SHA-1, SHA-256 y SHA-512 a partir de texto
 -Generador de Contrasenas crea contrasenas seguras con opciones personalizables
+-Verificador de Certificados TLS analiza certificados para verificar fechas, algoritmo y tamaño de clave
 
 # Capturas
 <img width="1310" height="939" alt="Captura de pantalla 2026-02-01 221212" src="https://github.com/user-attachments/assets/19ea5d71-d6c5-45d1-aedf-158b5a7d0003" />

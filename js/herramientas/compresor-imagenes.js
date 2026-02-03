@@ -185,7 +185,7 @@ class CompresorImagenes {
                                 <div class="col-lg-6">
                                     <h6 class="text-center mb-3">
                                         <span class="badge bg-success">Comprimida</span>
-                                        <span id="porcentajeReduccion" class="badge bg-warning text-dark ms-2" style="display: none;">
+                                        <span id="porcentajeReduccion" class="badge bg-warning ms-2" style="display: none;">
                                             -50%
                                         </span>
                                     </h6>
@@ -268,7 +268,7 @@ class CompresorImagenes {
             <div class="row">
                 <div class="col-12">
                     <div class="card herramienta-card border-warning">
-                        <div class="card-header bg-warning text-dark">
+                        <div class="card-header bg-warning">
                             <h5 class="card-title mb-0">
                                 <i class="bi bi-info-circle me-2"></i>Guía de Compresión de Imágenes
                             </h5>

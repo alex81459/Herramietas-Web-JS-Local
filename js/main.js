@@ -146,6 +146,15 @@ class SuiteHerramientas {
                 icono: 'bi-card-text',
                 tags: ['texto', 'contar', 'limpiar'],
                 modulo: 'contador-texto'
+            },
+            {
+                id: 'verificador-certificados',
+                nombre: 'Verificador de Certificados TLS',
+                descripcion: 'Analiza certificados PEM: fechas, algoritmo y tamaño de clave',
+                categoria: 'ti',
+                icono: 'bi-shield-check',
+                tags: ['certificado', 'tls', 'ssl', 'pem', 'seguridad'],
+                modulo: 'verificador-certificados'
             }
         ];
     }
@@ -193,7 +202,7 @@ class SuiteHerramientas {
                         
                         <div class="mt-3">
                             ${herramienta.tags.map(tag => 
-                                `<span class="badge bg-light text-dark me-1 mb-1">${tag}</span>`
+                                `<span class="badge bg-secondary text-white me-1 mb-1">${tag}</span>`
                             ).join('')}
                         </div>
                     </div>
@@ -328,6 +337,11 @@ class SuiteHerramientas {
             case 'contador-texto':
                 if (window.contadorTexto) {
                     window.contadorTexto.render();
+                }
+                break;
+            case 'verificador-certificados':
+                if (window.VerificadorCertificados) {
+                    new VerificadorCertificados().render();
                 }
                 break;
             default:

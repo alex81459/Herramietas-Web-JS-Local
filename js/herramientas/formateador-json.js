@@ -198,7 +198,7 @@ class FormateadorJSON {
             <div class="row">
                 <div class="col-12">
                     <div class="card herramienta-card border-warning">
-                        <div class="card-header bg-warning text-dark">
+                        <div class="card-header bg-warning">
                             <h5 class="card-title mb-0">
                                 <i class="bi bi-info-circle me-2"></i>Guía de JSON
                             </h5>
@@ -569,7 +569,7 @@ class FormateadorJSON {
 
         const clavesArray = Array.from(claves);
         const clavesHTML = clavesArray.map(clave => 
-            `<span class="badge bg-light text-dark me-1 mb-1"><code>${clave}</code></span>`
+            `<span class="badge bg-secondary text-white me-1 mb-1"><code>${clave}</code></span>`
         ).join('');
         
         container.innerHTML = clavesHTML;

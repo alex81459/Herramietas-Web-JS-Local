@@ -151,7 +151,7 @@ class GeneradorUUID {
                 
                 <div class="col-lg-6">
                     <div class="card herramienta-card h-100">
-                        <div class="card-header bg-warning text-dark">
+                        <div class="card-header bg-warning">
                             <h5 class="card-title mb-0">
                                 <i class="bi bi-info-circle me-2"></i>Análisis UUID
                             </h5>
