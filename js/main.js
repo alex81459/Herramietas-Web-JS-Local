@@ -155,6 +155,15 @@ class SuiteHerramientas {
                 icono: 'bi-shield-check',
                 tags: ['certificado', 'tls', 'ssl', 'pem', 'seguridad'],
                 modulo: 'verificador-certificados'
+            },
+            {
+                id: 'formateador-sql',
+                nombre: 'Formateador SQL',
+                descripcion: 'Formatea consultas SELECT/INSERT/UPDATE para MySQL/PostgreSQL',
+                categoria: 'ti',
+                icono: 'bi-code-slash',
+                tags: ['sql', 'formatear', 'mysql', 'postgresql', 'consulta'],
+                modulo: 'formateador-sql'
             }
         ];
     }
@@ -342,6 +351,11 @@ class SuiteHerramientas {
             case 'verificador-certificados':
                 if (window.VerificadorCertificados) {
                     new VerificadorCertificados().render();
+                }
+                break;
+            case 'formateador-sql':
+                if (window.FormateadorSQL) {
+                    new FormateadorSQL().render();
                 }
                 break;
             default:

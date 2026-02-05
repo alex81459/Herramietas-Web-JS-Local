@@ -33,6 +33,7 @@ Coleccion de herramientas utiles para desarrolladores y usuarios web desarrollad
 ## Herramientas de Texto
 -Contador de Texto uenta caracteres, palabras, parrafos, lineas y espacios
 -Formateador JSON valida, formatea, minimiza y embellece codigo JSON
+-Formateador SQL formatea y estructura consultas SQL (SELECT, INSERT, UPDATE, DELETE) para MySQL y PostgreSQL con opciones de indentacion y estilo personalizables
 
 ## Generadores
 -Generador UUID crea identificadores unicos universales (v1, v4)
