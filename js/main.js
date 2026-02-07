@@ -112,6 +112,15 @@ class SuiteHerramientas {
                 modulo: 'json-formatter'
             },
             {
+                id: 'json-csv-conversor',
+                nombre: 'Conversor JSON a CSV',
+                descripcion: 'Convierte JSON a CSV y CSV a JSON para uso administrativo',
+                categoria: 'documentos',
+                icono: 'bi-arrow-left-right',
+                tags: ['json', 'csv', 'conversion', 'datos', 'oficina'],
+                modulo: 'json-csv-conversor'
+            },
+            {
                 id: 'generador-uuid',
                 nombre: 'Generador de UUID v4',
                 descripcion: 'Genera identificadores únicos universales usando crypto.randomUUID()',
@@ -146,6 +155,43 @@ class SuiteHerramientas {
                 icono: 'bi-card-text',
                 tags: ['texto', 'contar', 'limpiar'],
                 modulo: 'contador-texto'
+            },
+            {
+                id: 'compresor-pdf',
+                nombre: 'Compresor de PDF',
+                descripcion: 'Reduce peso de PDFs renderizando paginas a imagen',
+                categoria: 'documentos',
+                icono: 'bi-file',
+                tags: ['pdf', 'comprimir', 'documento', 'imagenes'],
+                modulo: 'compresor-pdf'
+            },
+            {
+                id: 'firmador-pdf',
+                nombre: 'Firmador visual de PDF',
+                descripcion: 'Inserta imagen de firma en pagina seleccionada',
+                categoria: 'documentos',
+                icono: 'bi-pencil',
+                tags: ['pdf', 'firma', 'imagen', 'documento'],
+                modulo: 'firmador-pdf'
+            },
+            {
+                id: 'divisor-unificador-pdf',
+                nombre: 'Divisor / Unificador de PDF',
+                descripcion: 'Une varios PDFs o separa paginas por rango',
+                categoria: 'documentos',
+                icono: 'bi-file',
+                tags: ['pdf', 'unir', 'dividir', 'documento'],
+                modulo: 'divisor-unificador-pdf'
+            },
+            {
+                id: 'generador-datos-fake',
+                nombre: 'Generador de Datos Fake',
+                descripcion: 'Personas, RUT valido, correos, telefonos y direcciones',
+                categoria: 'documentos',
+                icono: 'bi-person-badge',
+                iconoTarjeta: 'bi-person',
+                tags: ['datos', 'fake', 'rut', 'correo', 'telefono', 'direccion'],
+                modulo: 'generador-datos-fake'
             },
             {
                 id: 'verificador-certificados',
@@ -200,11 +246,12 @@ class SuiteHerramientas {
                         </button>
                         
                         <span class="badge badge-categoria bg-${this.obtenerColorCategoria(herramienta.categoria)}">
+                            <i class="${herramienta.icono} me-1"></i>
                             ${this.obtenerNombreCategoria(herramienta.categoria)}
                         </span>
                         
                         <div class="text-center">
-                            <i class="${herramienta.icono} icono-herramienta"></i>
+                            <i class="${herramienta.iconoTarjeta || herramienta.icono} icono-herramienta"></i>
                             <h5 class="card-title">${herramienta.nombre}</h5>
                             <p class="card-text text-muted">${herramienta.descripcion}</p>
                         </div>
@@ -348,6 +395,26 @@ class SuiteHerramientas {
                     window.contadorTexto.render();
                 }
                 break;
+            case 'compresor-pdf':
+                if (window.compresorPDF) {
+                    window.compresorPDF.renderizar();
+                }
+                break;
+            case 'firmador-pdf':
+                if (window.firmadorPDF) {
+                    window.firmadorPDF.renderizar();
+                }
+                break;
+            case 'divisor-unificador-pdf':
+                if (window.divisorUnificadorPDF) {
+                    window.divisorUnificadorPDF.renderizar();
+                }
+                break;
+            case 'generador-datos-fake':
+                if (window.generadorDatosFake) {
+                    window.generadorDatosFake.renderizar();
+                }
+                break;
             case 'verificador-certificados':
                 if (window.VerificadorCertificados) {
                     new VerificadorCertificados().render();
@@ -356,6 +423,11 @@ class SuiteHerramientas {
             case 'formateador-sql':
                 if (window.FormateadorSQL) {
                     new FormateadorSQL().render();
+                }
+                break;
+            case 'json-csv-conversor':
+                if (window.conversorJsonCsv) {
+                    window.conversorJsonCsv.renderizar();
                 }
                 break;
             default:

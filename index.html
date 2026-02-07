@@ -129,6 +129,14 @@
     </div>
 
     <script src="lib/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="lib/jspdf.umd.min.js"></script>
+    <script type="module">
+        import * as pdfjsLib from './lib/pdf.min.js';
+        window.pdfjsLib = pdfjsLib;
+        if (pdfjsLib.GlobalWorkerOptions) {
+            pdfjsLib.GlobalWorkerOptions.workerSrc = './lib/pdf.worker.min.js';
+        }
+    </script>
     <script src="js/utils.js"></script>
     <script src="js/herramientas/generador-rut.js"></script>
     <script src="js/herramientas/generador-contrasenas.js"></script>
@@ -142,6 +150,11 @@
     <script src="js/herramientas/contador-texto.js"></script>
     <script src="js/herramientas/verificador-certificados.js"></script>
     <script src="js/herramientas/formateador-sql.js"></script>
+    <script src="js/herramientas/json-csv-conversor.js"></script>
+    <script src="js/herramientas/generador-datos-fake.js"></script>
+    <script src="js/herramientas/compresor-pdf.js"></script>
+    <script src="js/herramientas/firmador-pdf.js"></script>
+    <script src="js/herramientas/divisor-unificador-pdf.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
