@@ -643,7 +643,6 @@ class FormateadorJSON {
         document.getElementById('copiarSalida').disabled = true;
         document.getElementById('descargarJSON').disabled = true;
         
-        // Limpiar análisis
         ['conteoObjetos', 'conteoArrays', 'conteoPropiedades', 'conteoStrings', 
          'conteoNumeros', 'conteoBooleanos', 'conteoNulos', 'profundidadMaxima'].forEach(id => {
             document.getElementById(id).textContent = '0';

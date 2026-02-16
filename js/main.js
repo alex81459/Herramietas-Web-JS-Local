@@ -148,6 +148,36 @@ class SuiteHerramientas {
                 modulo: 'conversor-imagenes'
             },
             {
+                id: 'redactor-imagenes',
+                nombre: 'Redactor / Pixelador de zonas en imágenes',
+                descripcion: 'Selecciona rectángulos y píxelalos o tápalos para anonimizar',
+                categoria: 'imagenes',
+                icono: 'bi-eye-slash',
+                iconoTarjeta: 'bi-eye-slash',
+                tags: ['imagen', 'pixelar', 'anonimizar', 'redactar', 'ocultar'],
+                modulo: 'redactor-imagenes'
+            },
+            {
+                id: 'conversor-imagen-pdf',
+                nombre: 'Convertidor de imagen a PDF',
+                descripcion: 'Convierte imágenes a PDF con opciones de tamaño y calidad',
+                categoria: 'imagenes',
+                icono: 'bi-file-earmark-pdf',
+                iconoTarjeta: 'bi-file-earmark-pdf',
+                tags: ['imagen', 'pdf', 'convertir', 'documento'],
+                modulo: 'conversor-imagen-pdf'
+            },
+            {
+                id: 'extractor-colores',
+                nombre: 'Extractor de colores',
+                descripcion: 'Palette + códigos HEX/RGB/HSL desde una imagen',
+                categoria: 'imagenes',
+                icono: 'bi-palette',
+                iconoTarjeta: 'bi-palette',
+                tags: ['imagen', 'colores', 'palette', 'hex', 'rgb', 'hsl'],
+                modulo: 'extractor-colores'
+            },
+            {
                 id: 'contador-texto',
                 nombre: 'Contador de Texto',
                 descripcion: 'Cuenta palabras, caracteres y limpia texto',
@@ -210,6 +240,36 @@ class SuiteHerramientas {
                 icono: 'bi-code-slash',
                 tags: ['sql', 'formatear', 'mysql', 'postgresql', 'consulta'],
                 modulo: 'formateador-sql'
+            },
+            {
+                id: 'calculadora-ups',
+                nombre: 'Calculadora de UPS',
+                descripcion: 'Calcula Watts, VA y autonomía estimada para UPS',
+                categoria: 'ti',
+                icono: 'bi-plug-fill',
+                iconoTarjeta: 'bi-gear',
+                tags: ['ups', 'watts', 'va', 'autonomia', 'energia', 'calculadora'],
+                modulo: 'calculadora-ups'
+            },
+            {
+                id: 'calculadora-impresion',
+                nombre: 'Calculadora de costos de impresión',
+                descripcion: 'Tinta, papel, energía, desgaste y costos totales',
+                categoria: 'ti',
+                icono: 'bi-printer',
+                iconoTarjeta: 'bi-calculator',
+                tags: ['impresion', 'costos', 'tinta', 'papel', 'energia', 'calculadora'],
+                modulo: 'calculadora-impresion'
+            },
+            {
+                id: 'inspector-navegador',
+                nombre: 'Inspector de navegador y dispositivo',
+                descripcion: 'User-Agent, resolución, RAM estimada, núcleos, idioma y más',
+                categoria: 'ti',
+                icono: 'bi-info-circle',
+                iconoTarjeta: 'bi-info-circle',
+                tags: ['navegador', 'dispositivo', 'user-agent', 'resolucion', 'ram', 'nucleos', 'idioma'],
+                modulo: 'inspector-navegador'
             }
         ];
     }
@@ -390,6 +450,21 @@ class SuiteHerramientas {
                     window.conversorImagenes.render();
                 }
                 break;
+            case 'redactor-imagenes':
+                if (window.RedactorImagenes) {
+                    new RedactorImagenes().render(document.getElementById('contenidoHerramienta'));
+                }
+                break;
+            case 'conversor-imagen-pdf':
+                if (window.ConversorImagenPDF) {
+                    new ConversorImagenPDF().render(document.getElementById('contenidoHerramienta'));
+                }
+                break;
+            case 'extractor-colores':
+                if (window.ExtractorColores) {
+                    new ExtractorColores().render(document.getElementById('contenidoHerramienta'));
+                }
+                break;
             case 'contador-texto':
                 if (window.contadorTexto) {
                     window.contadorTexto.render();
@@ -428,6 +503,21 @@ class SuiteHerramientas {
             case 'json-csv-conversor':
                 if (window.conversorJsonCsv) {
                     window.conversorJsonCsv.renderizar();
+                }
+                break;
+            case 'calculadora-ups':
+                if (window.CalculadoraUPS) {
+                    new CalculadoraUPS().render(document.getElementById('contenidoHerramienta'));
+                }
+                break;
+            case 'inspector-navegador':
+                if (window.InspectorNavegador) {
+                    new InspectorNavegador().render(document.getElementById('contenidoHerramienta'));
+                }
+                break;
+            case 'calculadora-impresion':
+                if (window.CalculadoraImpresion) {
+                    new CalculadoraImpresion().render(document.getElementById('contenidoHerramienta'));
                 }
                 break;
             default:
